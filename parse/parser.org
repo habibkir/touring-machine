@@ -1,0 +1,29 @@
+* Parsing
+** Tokeneee
+ 1. Consoom
+    1. parentesi -> parentesi
+    2. potrebbe iniziare una read-macro?
+    3. aggiungi al simbolo corrente
+ 2. cutoff token et roba
+
+qualcosa del genere    
+#+begin_src lisp
+  (dochar (char string)
+	  (case char
+		((#\( #\)) (push token-list char))
+		((#\# #\' ...) (coso read macro))
+		(otherwise (add char to curr token)))
+	  (when (curr token longer than...)
+	    (cutoff curr token)))
+#+end_src
+
+** Per fare l'albero ci voglion simboli
+se parentesi inizia il layer
+se parentesi finisci il layer
+addeh addeh addeh?
+
+oppure inserisco la read macro some simbolo e interpreto i simboli
+secondo le specifiche della read macro?
+
+mi sa meglio inserire la read macro come simbolo e cosare secondo la
+roba della read macro.

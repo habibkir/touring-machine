@@ -1,0 +1,13 @@
+* Che è sta roba?
+Sto cercando di creare una macro che permetta di definire macchine di
+Turing in common lisp con una sintassi che rifletta la
+rappresentazione di queste usata nell'articolo originale /On
+computable numbers with an application to the [quello]/
+
+* Perchè?
+La macro per ora ha come scopo principale il fungere da prototipo per
+quando farò un parser e un interpreter vero e propio per un linguaggio
+/tmin/ (/Turing machine instruction notation/ (il nome è work in progress))
+
+Inoltre ci sarà il bonus non trascurabile di obbligarmi a capire che
+cazzo sto facendo con sto lisp, il che non sembra una pessima idea

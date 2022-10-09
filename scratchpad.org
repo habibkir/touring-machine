@@ -1,0 +1,30 @@
+Strutture dati
+#+begin_src lisp
+
+    (defstruct turing-machine
+      (rows nil)
+      (tape nil))
+
+    (defstruct tape
+      (buf nil)
+      (ptr nil))
+
+#+end_src
+
+esempio definizione macchina
+#+begin_src lisp
+  (defmacro defmachine (machine-name &rest configs)
+    `(setf ,machine-name
+	   (make-turing-machine :m-configs ,configs
+				:tape (make-blank-tape))))
+  (defmacine machine-name
+    (q1 ((symbols) (actions) final-config)
+	((symbols) (actions) final-config)
+	(et cetera))
+    (q2 ((symbols) (actions) final-config)
+	(et cetera))
+    (q3 ((symbols) (actions) final-config)
+	(et cetera))
+    (et cetera))
+#+end_src
+  
